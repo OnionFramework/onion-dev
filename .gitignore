@@ -1,6 +1,11 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
+#the next 3 lines are to ignore files without extensions
+*
+!/**/
+!*.*
+
 # Prerequisites
 *.d
 
