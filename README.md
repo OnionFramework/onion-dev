@@ -1,8 +1,7 @@
 <div align="center"> 
   
-<img src=https://github.com/OnionFramework/onion-dev/blob/main/onion-dev.png align="top"
+<img src=https://github.com/OnionFramework/onion-dev/blob/main/img/onion-dev.png align="top"
      alt="Onion Logo by flaticon.com" width="200">
-
 
 # onion-dev
   
