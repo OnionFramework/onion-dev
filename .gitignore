@@ -39,3 +39,7 @@
 *.exe
 *.out
 *.app
+
+#qt excludes
+*.user
+build-qt*
