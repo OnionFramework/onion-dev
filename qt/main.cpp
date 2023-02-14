@@ -1,37 +1,22 @@
 #include <iostream>
-#include "onion/class_info.hpp"
+#include "cops/tsp/array/create.hpp"
 
 using namespace std;
 
-class X : public onion::ClassInfo
-{
-public:
+//onion::cops::tsp::array::CreateRandom<10> createRnd;
+//onion::cops::tsp::array::CreateGreedy<10> createGreedy;
 
-    X(const ClassInfo& ci): ClassInfo(ci){}
-    virtual ~X() { std::cout << "X dtor\n"; }
-    virtual void operator()(void) = 0;
-};
+class Ia{
 
-class Y : public X{
-public:
-    Y():X( ClassInfoSet()
-           .name("X")
-           .version_tag("v0.2.0")
-           .purpose("Teste")){}
 
-    virtual ~Y() { std::cout << "Y dtor\n"; }
-    void operator()(void){
-       std::cout << "Y() called\n";
-    }
 };
 
 int main()
 {
-    X* x = new Y;
 
-    std::cout<< x;
+//    std::cout<< createRnd << endl;
+//    std::cout<< createGreedy << endl;
 
-    delete x;
 
     /*
     // create each plugabble object

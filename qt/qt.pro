@@ -13,6 +13,7 @@ DISTFILES += \
     ../../onion/README.md
 
 HEADERS += \
+    ../../onion/cops/cop_info.hpp \
     ../../onion/cops/functions/rv_functions.hpp \
     ../../onion/cops/mkp/mkp.hpp \
     ../../onion/cops/tsp/array/create.hpp \
