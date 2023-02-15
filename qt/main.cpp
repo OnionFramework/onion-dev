@@ -1,21 +1,18 @@
 #include <iostream>
 #include "cops/tsp/array/create.hpp"
+#include "onion/component.hpp"
 
 using namespace std;
 
-//onion::cops::tsp::array::CreateRandom<10> createRnd;
-//onion::cops::tsp::array::CreateGreedy<10> createGreedy;
+onion::cops::tsp::array::CreateRandom<10> createRnd;
+onion::cops::tsp::array::CreateGreedy<10> createGreedy;
 
-class Ia{
-
-
-};
 
 int main()
 {
 
-//    std::cout<< createRnd << endl;
-//    std::cout<< createGreedy << endl;
+    std::cout<< createRnd << endl;
+    std::cout<< createGreedy << endl;
 
 
     /*
