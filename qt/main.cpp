@@ -3,7 +3,10 @@
 //#include "cops/tsp/array/create_random.hpp"
 #include "onion/random.hpp"
 
+#include <chrono>
+
 using namespace std;
+using namespace std::chrono;
 
 //onion::cops::tsp::array::CreateRandom<10> createRnd;
 //onion::cops::tsp::array::CreateGreedy<10> createGreedy;
@@ -15,8 +18,20 @@ int main()
 //    std::cout<< createRnd << endl;
 //    std::cout<< createGreedy << endl;
 
-    onion::random<> r;
-    std::cout<< r.uniform_real_01() << std::endl << r.uniform_int_between(10,20);
+    high_resolution_clock::time_point begin = high_resolution_clock::now();
+
+    double d = 0;
+
+    //onion::random& r = *( new onion::random_cpp11< std::default_random_engine >() );
+    onion::random& r = *( new onion::random_legacy_c() );
+
+    for(unsigned i = 0; i < 1e08; i++){
+        d += r.uniform_real_01();
+    }
+    double t = duration_cast<duration<double>>( high_resolution_clock::now() - begin).count();
+    std::cout << "Time    : " << t << endl;
+    std::cout << "Average : " << d / 1e08 << endl;
+
 
     /*
     // create each plugabble object
@@ -39,9 +54,20 @@ int main()
     localSearch.setCreateOperator(...)
     localsearch.set
 
+    .setRandomEngine( std::rand );
+    .setRandomEngineSeedFcn( std::seed );
+    .setRandomEngineSeedGenerator( [](){std::time(nullptr)} );
 
+    // ou
 
+    .setRandomEngine( std::default_random_engine );
+    .setRandomEngineSeedFcn( []() );
+    .setRandomEngineSeedGenerator( [](){std::time(nullptr)} );
 
+    // inside
+
+    random().uniform_real_01();
+    random().uniform_int_between(0,10);
 
     */
 }
