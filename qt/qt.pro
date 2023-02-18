@@ -4,7 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 INCLUDEPATH += "../../onion/"
-SOURCES += main.cpp
+SOURCES += \
+    ../main.cpp
 
 DISTFILES += \
     ../../onion/onion.png \
