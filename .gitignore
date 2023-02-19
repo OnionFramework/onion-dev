@@ -43,3 +43,6 @@
 #qt excludes
 *.user
 build-qt*
+
+#do not ignore makefiles
+!makefile
