@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Generating 1e07 random numbers:  \n" << std::endl;
+    std::cout << "Generating 1e07 random numbers:   \n" << std::endl;
     onion::random& r = *( new onion::random_legacy_c() );
 
     double d = 0;
