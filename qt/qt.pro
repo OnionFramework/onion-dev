@@ -1,17 +1,13 @@
 TEMPLATE = app
+TARGET = onion
 CONFIG += console c++17
 CONFIG -= app_bundle
 CONFIG -= qt
 
 INCLUDEPATH += "../../onion/"
 SOURCES += \
+    ../../onion/onion/Random.cpp \
     ../main.cpp
-
-DISTFILES += \
-    ../../onion/onion.png \
-    ../../onion/LICENSE.md \
-    ../../onion/README.md
-
 
 HEADERS += \
     ../../onion/cops/functions/rv_functions.hpp \
@@ -19,12 +15,16 @@ HEADERS += \
     ../../onion/cops/tsp/array/create_random.hpp \
     ../../onion/cops/tsp/array/tsp.hpp \
     ../../onion/cops/tsp/bitmatrix/tsp.hpp \
+    ../../onion/onion/NonCopyable.hpp \
+    ../../onion/onion/Random.hpp \
+    ../../onion/onion/RandomEngine.hpp \
+    ../../onion/onion/RandomLegacyC.hpp \
+    ../../onion/onion/RandomSTL.hpp \
     ../../onion/onion/create.hpp \
     ../../onion/onion/local_search.hpp \
-    ../../onion/onion/non_copyable.hpp \
+    ../../onion/onion/component.hpp \
     ../../onion/onion.hpp \
-    ../../onion/onionfw.hpp \
-    ../../onion/onion/component.hpp
+    ../test_rng.hpp
 
 
 CONFIG(debug, debug|release) {
