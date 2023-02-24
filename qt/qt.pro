@@ -15,14 +15,15 @@ HEADERS += \
     ../../onion/cops/tsp/array/create_random.hpp \
     ../../onion/cops/tsp/array/tsp.hpp \
     ../../onion/cops/tsp/bitmatrix/tsp.hpp \
+    ../../onion/onion/Algorithm.hpp \
+    ../../onion/onion/Component.hpp \
+    ../../onion/onion/Create.hpp \
+    ../../onion/onion/LocalSearch.hpp \
     ../../onion/onion/NonCopyable.hpp \
     ../../onion/onion/Random.hpp \
     ../../onion/onion/RandomEngine.hpp \
     ../../onion/onion/RandomLegacyC.hpp \
     ../../onion/onion/RandomSTL.hpp \
-    ../../onion/onion/create.hpp \
-    ../../onion/onion/local_search.hpp \
-    ../../onion/onion/component.hpp \
     ../../onion/onion.hpp \
     ../test_rng.hpp
 
