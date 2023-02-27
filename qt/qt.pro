@@ -16,15 +16,19 @@ HEADERS += \
     ../../onion/cops/tsp/array/tsp.hpp \
     ../../onion/cops/tsp/bitmatrix/tsp.hpp \
     ../../onion/onion/Algorithm.hpp \
-    ../../onion/onion/Component.hpp \
-    ../../onion/onion/Create.hpp \
+    ../../onion/onion/ComparissonOperator.hpp \
+    ../../onion/onion/ComponentID.hpp \
+    ../../onion/onion/CreateOperator.hpp \
     ../../onion/onion/LocalSearch.hpp \
+    ../../onion/onion/NeighborhoodOperator.hpp \
     ../../onion/onion/NonCopyable.hpp \
+    ../../onion/onion/ObjectiveFunction.hpp \
     ../../onion/onion/Random.hpp \
     ../../onion/onion/RandomEngine.hpp \
     ../../onion/onion/RandomLegacyC.hpp \
     ../../onion/onion/RandomSTL.hpp \
     ../../onion/onion.hpp \
+    ../../onion/onion/SelectOperator.hpp \
     ../test_rng.hpp
 
 

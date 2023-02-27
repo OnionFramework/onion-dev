@@ -50,19 +50,14 @@ localSearch()( SetComponents<LocalSearch>()
  ENTANGLED
 
 */
-class C : public onion::NonCopyable{
-public :
-    C(int i):x(i){}
-    int x;
-};
+
+#include "onion/ComparissonOperator.hpp"
 
 int main()
 {
-    C a(10);
-    //C b = a;
-    //C d(a);
-    C b(5);
+    ComparissonOperator<int> c = LessOrEqual<int>;
 
-    b = a;
+    if ( c(10,9) ) std::cout<<"10 é menor que 20!\n";
+    else std::cout<<"10 é MAIOR que 20!?\n";
 
 }
