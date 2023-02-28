@@ -17,8 +17,8 @@ HEADERS += \
     ../../onion/cops/tsp/bitmatrix/tsp.hpp \
     ../../onion/onion/Algorithm.hpp \
     ../../onion/onion/ComparissonOperator.hpp \
-    ../../onion/onion/ComponentID.hpp \
     ../../onion/onion/CreateOperator.hpp \
+    ../../onion/onion/IdentifiedComponent.hpp \
     ../../onion/onion/LocalSearch.hpp \
     ../../onion/onion/NeighborhoodOperator.hpp \
     ../../onion/onion/NonCopyable.hpp \
