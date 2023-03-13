@@ -20,7 +20,6 @@ HEADERS += \
     ../../onion/onion/CreateOperator.hpp \
     ../../onion/onion/IdentifiedComponent.hpp \
     ../../onion/onion/LocalSearch.hpp \
-    ../../onion/onion/NeighborhoodOperator.hpp \
     ../../onion/onion/NonCopyable.hpp \
     ../../onion/onion/ObjectiveFunction.hpp \
     ../../onion/onion/Random.hpp \
@@ -29,7 +28,10 @@ HEADERS += \
     ../../onion/onion/RandomSTL.hpp \
     ../../onion/onion.hpp \
     ../../onion/onion/SelectOperator.hpp \
-    ../test_rng.hpp
+    ../test_rng.hpp \
+    ../../onion/onion/PerturbationOperator.hpp \
+    ../../onion/onion/TypeTraits.hpp \
+    ../../onion/onion/PerturbationParameterOperator.hpp
 
 
 CONFIG(debug, debug|release) {

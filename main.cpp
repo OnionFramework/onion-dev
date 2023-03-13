@@ -97,45 +97,23 @@ struct Nothing : public Maybe<T> {
 };
 
 #include "onion/ComparissonOperator.hpp"
+#include <type_traits>
+#include <cstddef>
+#include <array>
+#include <vector>
 
-Maybe<int>& select(int p){
-    static Nothing<int> nothing;
-    static Just<int> just(0);
-
-    if (p){
-        just = Just<int>(p);
-        return just;
-    }
-    else{
-        return nothing;
-    }
-}
-
-class A{
-   bool operator==(const A&){ return true;}
+struct X {
+     int at(const std::string&) { return 42; }
 };
 
-namespace CHECK
-{
-  struct No {};
-  template<typename T, typename Arg> No operator== (const T&, const Arg&);
+struct Y : X {};
 
-  template<typename T, typename Arg = T>
-  struct EqualExists
-  {
-    enum { value = !std::is_same<decltype(std::declval<T>() < std::declval<Arg>()), No>::value };
-  };
+
+
+int main() {
+
+  static_assert( has_at< int >,"has at failed");
+
+  return 0;
 }
-
-int main()
-{
-    if ( CHECK::EqualExists<A>::value ){
-        std::cout<< "EqualExists\n";
-    }
-    else{
-       std::cout<< "NO equal op here\n";
-    }
-
-}
-
 

@@ -41,3 +41,7 @@ build-qt*
 
 #ignore vscode build
 vscode/main
+
+#ignore this thing 
+.DS_Store
+*.bak
