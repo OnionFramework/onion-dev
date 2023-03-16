@@ -6,8 +6,8 @@ CONFIG -= qt
 
 INCLUDEPATH += "../../onion/"
 SOURCES += \
-    ../../onion/onion/Random.cpp \
-    ../main.cpp
+    ../main.cpp \
+    ../../onion/Random.cpp
 
 HEADERS += \
     ../../onion/cops/functions/rv_functions.hpp \
@@ -15,24 +15,23 @@ HEADERS += \
     ../../onion/cops/tsp/array/create_random.hpp \
     ../../onion/cops/tsp/array/tsp.hpp \
     ../../onion/cops/tsp/bitmatrix/tsp.hpp \
-    ../../onion/onion/Algorithm.hpp \
-    ../../onion/onion/ComparissonOperator.hpp \
-    ../../onion/onion/CreateOperator.hpp \
-    ../../onion/onion/IdentifiedComponent.hpp \
-    ../../onion/onion/LocalSearch.hpp \
-    ../../onion/onion/NonCopyable.hpp \
-    ../../onion/onion/ObjectiveFunction.hpp \
-    ../../onion/onion/Random.hpp \
-    ../../onion/onion/RandomEngine.hpp \
-    ../../onion/onion/RandomLegacyC.hpp \
-    ../../onion/onion/RandomSTL.hpp \
-    ../../onion/onion.hpp \
-    ../../onion/onion/SelectOperator.hpp \
     ../test_rng.hpp \
-    ../../onion/onion/PerturbationOperator.hpp \
-    ../../onion/onion/TypeTraits.hpp \
-    ../../onion/onion/PerturbationParameterOperator.hpp
-
+    ../../onion/Algorithm.hpp \
+    ../../onion/ComparissonOperator.hpp \
+    ../../onion/CreateOperator.hpp \
+    ../../onion/LocalSearch.hpp \
+    ../../onion/NonCopyable.hpp \
+    ../../onion/ObjectiveFunction.hpp \
+    ../../onion/PerturbationOperator.hpp \
+    ../../onion/Random.hpp \
+    ../../onion/RandomEngine.hpp \
+    ../../onion/RandomLegacyC.hpp \
+    ../../onion/RandomSTL.hpp \
+    ../../onion/SelectOperator.hpp \
+    ../../onion/TypeTraits.hpp \
+    ../../onion/ComponentID.hpp \
+    ../../onion/ParameterOperator.hpp \
+    ../test_functional.hpp
 
 CONFIG(debug, debug|release) {
     DEFINES += "__DEBUG__"
