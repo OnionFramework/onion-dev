@@ -148,15 +148,15 @@ inline void _2opt_tau(solution_t& s, const tr_param& p){
 // obj
 // sel
 
-template< class solution_t >
-inline std::array<solution_t, 9> _2opt_perturb(const solution_t& s){
+inline void  _2opt_perturb(const unsigned s[7], std::array<unsigned[7], 9>& res){
 
     tr_param params[9];
     _2opt_param<>(params);  // perturb_params = cte
 
-    std::array<solution_t, 9> res;
     for(unsigned i = 0; i < 9; i++ ){
-        res[i] = _2opt_tau(s,params[i]);
+        for(int j =0; j<7;j++)
+            res[i][j] = s[j];
+        _2opt_tau(res[i],params[i]);
     }
 }
 
@@ -196,17 +196,19 @@ int main(void){
 
         int best_nc = std::numeric_limits<int>::max();
 
-        auto candidates = _2opt_perturb(best2);
+        std::array<unsigned[7],9> candidates;
+        _2opt_perturb( best2, candidates );
         int p = 0;
         for(int j = 0; j < 9; j++){
 
             auto cand_val = objective( candidates[j] );
-            if ( cand_val < best_cost ) { p = j; } // select
+            if ( cand_val <= best_cost ) { best_nc = cand_val; p = j; } // select
         }
 
-        if ( best_delta <= 0 ){ // update
-            _2opt_tau(best, params[p]);
-            best_cost += best_delta;
+        if ( best_nc <= best_cost ){ // update
+            for(unsigned i = 0; i < 7;i++)
+                best[i] = candidates[p][i];
+            best_cost = best_nc;
             auto verif = objective(best);
             if (verif != best_cost) exit(0);
         }
