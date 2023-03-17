@@ -51,4 +51,6 @@ Variable neighborhood algorithms are that.....
 
 
 <hr style="margin-top: 80px;">
-<div style="padding-top:60px;"><a href="md__glossary.html">Back to top</a></div>
+    <div style="padding-top:60px;">
+    <a href="md__glossary.html">Back to top</a>
+</div>
