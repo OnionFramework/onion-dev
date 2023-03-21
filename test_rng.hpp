@@ -7,9 +7,9 @@
 #include <chrono>
 #include <iomanip>
 
-#include "onion/Random.hpp"
-#include "onion/RandomSTL.hpp"
-#include "onion/RandomLegacyC.hpp"
+#include "Random.hpp"
+#include "RandomSTL.hpp"
+#include "RandomLegacyC.hpp"
 
 using namespace std;
 using namespace std::chrono;

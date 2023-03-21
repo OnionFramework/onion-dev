@@ -31,7 +31,9 @@ HEADERS += \
     ../../onion/TypeTraits.hpp \
     ../../onion/ComponentID.hpp \
     ../../onion/ParameterOperator.hpp \
-    ../test_functional.hpp
+    ../test_functional.hpp \
+    ../test_delta_fcns.hpp \
+    ../test_copy_vector.hpp
 
 CONFIG(debug, debug|release) {
     DEFINES += "__DEBUG__"
