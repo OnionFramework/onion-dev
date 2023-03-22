@@ -1,30 +1,37 @@
-#include "test_copy_vector.hpp"
 #include <type_traits>
+#include <iostream>
 
-using fcn_ptr = int(*)(void);
+enum class types { simple, type1, type2 };
 
-enum class types { Basic, Delta };
-
-template < types t = types::Basic >
-class teste{
-public:
-
-    teste(fcn_ptr a = nullptr, fcn_ptr b = nullptr):f1(a),f2(b){}
-
-    const fcn_ptr f1;
-    const fcn_ptr f2;
-
-    void run(){
-        static_assert( t == types::Basic , "");
-    }
-    constexpr fcn_ptr get_f1() const { return f1; }
-
+template< types type >
+struct teste{
+    static void do_something();
 };
+
+template<>
+void teste<types::simple>::do_something(){
+    std::cout<< "main\n";
+    std::cout<< "method\n";
+}
+
+template<>
+void teste<types::type1>::do_something(){
+    std::cout<< "method\n";
+    std::cout<< "main\n";
+
+}
+
+template<>
+void teste<types::type2>::do_something(){
+    std::cout<< "Type2\n";
+}
 
 int main(void){
 
-   test_copy_vector();
+    teste<types::simple>::do_something();
+    teste<types::type1>::do_something();
+    //teste<types::type2>::do_something();
 
-}
+ }
 
 
