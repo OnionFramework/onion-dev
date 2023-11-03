@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = onion
-CONFIG += console c++17
+CONFIG += console c++20
 CONFIG -= app_bundle
 CONFIG -= qt
 
